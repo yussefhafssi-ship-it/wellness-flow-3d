@@ -17,9 +17,9 @@ export function Nav({ onCartOpen, cartCount }: { onCartOpen: () => void; cartCou
         scrolled ? "glass shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-24 md:h-28 flex items-center justify-between">
         <a href="#" aria-label="Maison DXN" className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="Maison DXN" className="h-12 w-auto md:h-14 object-contain" />
+          <img src={logoAsset.url} alt="Maison DXN" className="h-16 w-auto md:h-20 object-contain" />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm font-medium">
           {links.map((l) => (

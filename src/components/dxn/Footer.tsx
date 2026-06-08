@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
             <div className="bg-background/95 rounded-2xl p-4 inline-block">
-              <img src={logoAsset.url} alt="Maison DXN" className="h-20 w-auto object-contain" />
+              <img src={logoAsset.url} alt="Maison DXN" className="h-32 w-auto object-contain" />
             </div>
             <p className="mt-4 max-w-sm text-background/70">
               Nature's finest wellness products — crafted with science, delivered with care, since 1993.
