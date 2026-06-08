@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 
 const stats = [
-  { v: 10, suffix: "M+", l: "Happy Customers" },
-  { v: 180, suffix: "+", l: "Countries" },
-  { v: 30, suffix: "+", l: "Years of Heritage" },
-  { v: 500, suffix: "M+", l: "Products Sold" },
+  { v: 10, suffix: "M+", l: "عميل سعيد" },
+  { v: 180, suffix: "+", l: "دولة" },
+  { v: 30, suffix: "+", l: "سنة من الإرث" },
+  { v: 500, suffix: "M+", l: "منتج تم بيعه" },
 ];
 
 export function Stats() {

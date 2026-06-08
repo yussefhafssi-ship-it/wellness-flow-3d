@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import storyImg from "@/assets/story-image.jpg";
 
 const steps = [
-  { y: "1993", t: "The Beginning", b: "Dato' Dr. Lim Siow Jin founded DXN with a vision: bring ancient Ganoderma wisdom to the world." },
-  { y: "2000", t: "Global Expansion", b: "DXN grew into a worldwide movement, planting roots in over 100 countries." },
-  { y: "2015", t: "Research & Science", b: "Investing in laboratories and clinical research to validate every formula." },
-  { y: "Today", t: "10M+ Lives", b: "A global wellness family across 180+ countries, growing daily." },
+  { y: "1993", t: "البداية", b: "أسّس داتو دكتور ليم سياو جين شركة DXN برؤية واحدة: نقل حكمة الغانوديرما القديمة إلى العالم." },
+  { y: "2000", t: "التوسع العالمي", b: "نمت DXN لتصبح حركة عالمية وزرعت جذورها في أكثر من 100 دولة." },
+  { y: "2015", t: "البحث والعلم", b: "استثمار في المختبرات والدراسات السريرية للتحقق من كل تركيبة." },
+  { y: "اليوم", t: "10+ ملايين حياة", b: "عائلة عالمية للعافية في أكثر من 180 دولة، تتنامى يومياً." },
 ];
 
 export function Story() {
@@ -33,13 +33,12 @@ export function Story() {
     <section ref={ref} id="story" className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-start">
         <div className="lg:sticky lg:top-32">
-          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">Our Story</div>
+          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">قصتنا</div>
           <h2 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Three decades of <span className="text-gradient-gold italic">quiet devotion</span>.
+            ثلاثة عقود من <span className="text-gradient-gold italic">التفاني الهادئ</span>.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg max-w-md">
-            From a single mushroom farm in Malaysia to a wellness brand trusted across continents —
-            this is DXN.
+            من مزرعة فطر صغيرة في ماليزيا إلى علامة عافية موثوقة عبر القارات — هذه هي DXN.
           </p>
           <div className="story-img mt-8 relative aspect-[3/4] max-w-md rounded-3xl overflow-hidden shadow-elegant">
             <img src={storyImg} alt="DXN Story" loading="lazy" width={1080} height={1440} className="w-full h-full object-cover" />

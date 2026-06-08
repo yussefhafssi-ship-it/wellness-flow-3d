@@ -2,12 +2,12 @@ import { useEffect, useRef } from "react";
 import { Leaf, Shield, Award, Globe, Sprout, FlaskConical } from "lucide-react";
 
 const items = [
-  { icon: Leaf, title: "Natural Ingredients", body: "Sourced from pristine farms and wild-harvested with care." },
-  { icon: Shield, title: "Immune Support", body: "Bioactive compounds that nurture your body's defenses." },
-  { icon: Award, title: "Premium Quality", body: "GMP, ISO and Halal certified across all operations." },
-  { icon: Globe, title: "Worldwide Trust", body: "Loved by 10M+ customers in 180+ countries." },
-  { icon: Sprout, title: "Sustainable Wellness", body: "Regenerative practices that respect the earth." },
-  { icon: FlaskConical, title: "Scientific Research", body: "Decades of clinical study behind every formula." },
+  { icon: Leaf, title: "مكونات طبيعية", body: "تُجمع من أنقى المزارع وتُحصد بعناية فائقة." },
+  { icon: Shield, title: "دعم المناعة", body: "مركّبات نشطة بيولوجياً تعزز دفاعات الجسم." },
+  { icon: Award, title: "جودة فاخرة", body: "معتمدون بمعايير GMP وISO وحلال في جميع عملياتنا." },
+  { icon: Globe, title: "ثقة عالمية", body: "محبوبون من 10+ ملايين عميل في 180+ دولة." },
+  { icon: Sprout, title: "عافية مستدامة", body: "ممارسات تجديدية تحترم الأرض." },
+  { icon: FlaskConical, title: "أبحاث علمية", body: "عقود من الدراسات السريرية خلف كل تركيبة." },
 ];
 
 export function Benefits() {
@@ -31,9 +31,9 @@ export function Benefits() {
     <section ref={ref} id="benefits" className="py-32 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-2xl mb-16">
-          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">Why DXN</div>
+          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">لماذا DXN</div>
           <h2 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold">
-            Wellness, <span className="text-gradient-primary italic">honestly made</span>.
+            عافية <span className="text-gradient-primary italic">صادقة الصُنع</span>.
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -3,9 +3,9 @@ import logoAsset from "@/assets/maison-dxn-logo.png.asset.json";
 
 export function Footer() {
   const cols = [
-    { h: "Shop", l: ["Ganoderma", "Spirulina", "Coffee", "Tea", "Personal Care"] },
-    { h: "Company", l: ["Our Story", "Research", "Sustainability", "Careers", "Press"] },
-    { h: "Support", l: ["Help Center", "Shipping", "Returns", "Contact", "FAQ"] },
+    { h: "المتجر", l: ["غانوديرما", "سبيرولينا", "قهوة", "شاي", "العناية الشخصية"] },
+    { h: "الشركة", l: ["قصتنا", "البحث العلمي", "الاستدامة", "الوظائف", "صحافة"] },
+    { h: "الدعم", l: ["مركز المساعدة", "الشحن", "الإرجاع", "تواصل", "الأسئلة الشائعة"] },
   ];
   return (
     <footer className="bg-foreground text-background pt-20 pb-10">
@@ -16,7 +16,7 @@ export function Footer() {
               <img src={logoAsset.url} alt="Maison DXN" className="h-32 w-auto object-contain" />
             </div>
             <p className="mt-4 max-w-sm text-background/70">
-              Nature's finest wellness products — crafted with science, delivered with care, since 1993.
+              منتجات صحية فاخرة من الطبيعة — صنعت بالعلم، وقدّمت بعناية، منذ 1993.
             </p>
             <div className="mt-6 flex gap-3">
               {[Instagram, Facebook, Twitter, Youtube].map((Ic, i) => (
@@ -38,11 +38,11 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-16 pt-6 border-t border-background/10 flex flex-col md:flex-row justify-between gap-4 text-sm text-background/60">
-          <div>© {new Date().getFullYear()} DXN Wellness. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} DXN للعافية. جميع الحقوق محفوظة.</div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold">Privacy</a>
-            <a href="#" className="hover:text-gold">Terms</a>
-            <a href="#" className="hover:text-gold">Cookies</a>
+            <a href="#" className="hover:text-gold">الخصوصية</a>
+            <a href="#" className="hover:text-gold">الشروط</a>
+            <a href="#" className="hover:text-gold">الكوكيز</a>
           </div>
         </div>
       </div>
