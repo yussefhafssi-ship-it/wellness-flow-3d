@@ -1,4 +1,5 @@
-import { Leaf, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import logoAsset from "@/assets/maison-dxn-logo.png.asset.json";
 
 export function Footer() {
   const cols = [
@@ -11,11 +12,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 font-display text-2xl font-bold">
-              <span className="grid place-items-center w-9 h-9 rounded-full bg-gold text-gold-foreground">
-                <Leaf className="w-4 h-4" />
-              </span>
-              DXN<span className="text-gold">.</span>
+            <div className="bg-background/95 rounded-2xl p-4 inline-block">
+              <img src={logoAsset.url} alt="Maison DXN" className="h-20 w-auto object-contain" />
             </div>
             <p className="mt-4 max-w-sm text-background/70">
               Nature's finest wellness products — crafted with science, delivered with care, since 1993.
