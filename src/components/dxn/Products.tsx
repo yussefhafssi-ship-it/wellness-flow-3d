@@ -1,11 +1,24 @@
 import { useEffect, useRef } from "react";
 import { Star, Plus } from "lucide-react";
 import ganoderma from "@/assets/product-ganoderma.jpg";
-import spirulina from "@/assets/product-spirulina.jpg";
-import coffee from "@/assets/product-coffee.jpg";
+import spirulinaLegacy from "@/assets/product-spirulina.jpg";
+import coffeeLegacy from "@/assets/product-coffee.jpg";
 import cordyceps from "@/assets/product-cordyceps.jpg";
-import lionsmane from "@/assets/product-lionsmane.jpg";
+import lionsmaneLegacy from "@/assets/product-lionsmane.jpg";
 import tea from "@/assets/product-tea.jpg";
+
+import reishi from "@/assets/products/dxn-10.png.asset.json";
+import ganocelium from "@/assets/products/dxn-9.png.asset.json";
+import spirulina from "@/assets/products/dxn-2.png.asset.json";
+import blackCumin from "@/assets/products/dxn-16.png.asset.json";
+import lionsMane from "@/assets/products/dxn-20.png.asset.json";
+import teaTree from "@/assets/products/dxn-41.png.asset.json";
+import lingzhiCoffee from "@/assets/products/dxn-49.png.asset.json";
+import morinzhi from "@/assets/products/dxn-54.png.asset.json";
+import zhiMint from "@/assets/products/dxn-58.png.asset.json";
+import lemonzhi from "@/assets/products/dxn-59.png.asset.json";
+
+import { formatMAD, usePriceOverrides } from "@/lib/prices";
 
 export type Product = {
   id: string;
@@ -17,16 +30,31 @@ export type Product = {
 };
 
 export const PRODUCTS: Product[] = [
-  { id: "rg", name: "DXN Reishi Gano", tag: "Ganoderma Capsules", price: 42, rating: 4.9, image: ganoderma },
-  { id: "sp", name: "DXN Spirulina", tag: "Green Algae Tablets", price: 28, rating: 4.8, image: spirulina },
-  { id: "lz", name: "DXN Lingzhi Coffee", tag: "Premium 3-in-1", price: 18, rating: 4.9, image: coffee },
-  { id: "co", name: "DXN Cordyceps", tag: "Energy & Endurance", price: 55, rating: 4.7, image: cordyceps },
-  { id: "lm", name: "DXN Lion's Mane", tag: "Focus & Clarity", price: 48, rating: 4.8, image: lionsmane },
-  { id: "te", name: "DXN Organic Tea", tag: "Heritage Blend", price: 22, rating: 4.6, image: tea },
+  { id: "rg", name: "DXN Reishi Gano (RG)", tag: "Ganoderma Capsules", price: 320, rating: 4.9, image: reishi.url },
+  { id: "gl", name: "DXN Ganocelium (GL)", tag: "Mycelium Capsules", price: 340, rating: 4.9, image: ganocelium.url },
+  { id: "sp", name: "DXN Spirulina", tag: "Green Algae Tablets", price: 280, rating: 4.8, image: spirulina.url },
+  { id: "bc", name: "DXN Black Cumin Plus", tag: "Wellness Capsules", price: 260, rating: 4.7, image: blackCumin.url },
+  { id: "lm", name: "DXN Lion's Mane", tag: "Focus & Clarity", price: 480, rating: 4.8, image: lionsMane.url },
+  { id: "tt", name: "DXN Tea Tree Cream", tag: "Skincare · 30g", price: 150, rating: 4.6, image: teaTree.url },
+  { id: "lz", name: "DXN Lingzhi Coffee 3-in-1", tag: "Premix Coffee", price: 180, rating: 4.9, image: lingzhiCoffee.url },
+  { id: "mz", name: "DXN Morinzhi", tag: "Morinda Juice · 700ml", price: 420, rating: 4.7, image: morinzhi.url },
+  { id: "zm", name: "DXN Zhi Mint Plus", tag: "Sugar-Free Candy", price: 220, rating: 4.6, image: zhiMint.url },
+  { id: "ln", name: "DXN Lemonzhi", tag: "Lemon Tea Mix", price: 200, rating: 4.7, image: lemonzhi.url },
+  { id: "gn", name: "DXN Ganoderma Classic", tag: "Heritage Blend", price: 360, rating: 4.8, image: ganoderma },
+  { id: "co", name: "DXN Cordyceps", tag: "Energy & Endurance", price: 550, rating: 4.7, image: cordyceps },
 ];
+
+// Legacy unused fallbacks (kept to preserve imports if user reverts)
+void spirulinaLegacy; void coffeeLegacy; void lionsmaneLegacy; void tea;
+
+export function useProducts(): Product[] {
+  const overrides = usePriceOverrides();
+  return PRODUCTS.map((p) => (overrides[p.id] != null ? { ...p, price: overrides[p.id] } : p));
+}
 
 export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
   const rootRef = useRef<HTMLElement>(null);
+  const products = useProducts();
 
   useEffect(() => {
     let ctx: any;
@@ -74,7 +102,7 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
         </div>
 
         <div className="prod-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-          {PRODUCTS.map((p) => (
+          {products.map((p) => (
             <div
               key={p.id}
               className="prod-card group relative bg-card rounded-3xl p-6 border border-border/60 transition-transform duration-300 will-change-transform shadow-sm hover:shadow-elegant"
@@ -89,7 +117,7 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
                   loading="lazy"
                   width={1024}
                   height={1024}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 <button
                   onClick={() => onAdd(p)}
@@ -110,7 +138,7 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-display font-bold">${p.price}</div>
+                  <div className="text-xl font-display font-bold whitespace-nowrap">{formatMAD(p.price)}</div>
                 </div>
               </div>
             </div>

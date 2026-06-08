@@ -1,6 +1,7 @@
 import { X, Plus, Minus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Product } from "./Products";
+import { formatMAD, usePriceOverrides } from "@/lib/prices";
 
 export type CartItem = Product & { qty: number };
 
@@ -12,7 +13,9 @@ export function CartDrawer({
   items: CartItem[];
   setItems: (fn: (prev: CartItem[]) => CartItem[]) => void;
 }) {
-  const subtotal = items.reduce((s, i) => s + i.price * i.qty, 0);
+  const overrides = usePriceOverrides();
+  const priced = items.map((i) => ({ ...i, price: overrides[i.id] ?? i.price }));
+  const subtotal = priced.reduce((s, i) => s + i.price * i.qty, 0);
   const setQty = (id: string, d: number) =>
     setItems((prev) =>
       prev.flatMap((i) => {
@@ -47,7 +50,7 @@ export function CartDrawer({
           {items.length === 0 && (
             <div className="text-center text-muted-foreground py-20">Your bag is empty.</div>
           )}
-          {items.map((i) => (
+          {priced.map((i) => (
             <div key={i.id} className="flex gap-4 animate-in fade-in slide-in-from-right-4">
               <img src={i.image} alt={i.name} className="w-20 h-20 rounded-2xl object-cover" />
               <div className="flex-1">
@@ -66,16 +69,16 @@ export function CartDrawer({
                     <span className="w-8 text-center text-sm">{i.qty}</span>
                     <button onClick={() => setQty(i.id, 1)} className="p-1.5 hover:text-primary"><Plus className="w-3.5 h-3.5" /></button>
                   </div>
-                  <div className="font-semibold">${(i.price * i.qty).toFixed(0)}</div>
+                  <div className="font-semibold">{formatMAD(i.price * i.qty)}</div>
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div className="p-6 border-t space-y-4 bg-secondary/30">
-          <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="font-semibold">${subtotal.toFixed(0)}</span></div>
+          <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="font-semibold">{formatMAD(subtotal)}</span></div>
           <div className="flex justify-between text-sm"><span className="text-muted-foreground">Shipping</span><span>Free</span></div>
-          <div className="flex justify-between text-xl font-display font-bold pt-2 border-t"><span>Total</span><span>${subtotal.toFixed(0)}</span></div>
+          <div className="flex justify-between text-xl font-display font-bold pt-2 border-t"><span>Total</span><span>{formatMAD(subtotal)}</span></div>
           <Button className="w-full h-14 rounded-full bg-primary hover:bg-primary/90 text-base">Checkout</Button>
         </div>
       </aside>

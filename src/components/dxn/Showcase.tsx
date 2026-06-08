@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
-import { PRODUCTS } from "./Products";
+import { useProducts } from "./Products";
+import { formatMAD } from "@/lib/prices";
 
 export function Showcase() {
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const PRODUCTS = useProducts();
 
   useEffect(() => {
     let ctx: any;
@@ -55,7 +57,7 @@ export function Showcase() {
               <div className="absolute bottom-0 left-0 right-0 p-7">
                 <div className="text-xs uppercase tracking-[0.3em] text-gold">0{i + 1} · {p.tag}</div>
                 <div className="mt-2 text-3xl font-display font-bold">{p.name}</div>
-                <div className="mt-1 text-primary-foreground/70 text-sm">${p.price} · Bestseller</div>
+                <div className="mt-1 text-primary-foreground/70 text-sm">{formatMAD(p.price)} · Bestseller</div>
               </div>
             </div>
           ))}
