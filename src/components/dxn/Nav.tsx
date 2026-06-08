@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Leaf, ShoppingBag, Search, Menu } from "lucide-react";
+import { ShoppingBag, Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/maison-dxn-logo.png.asset.json";
 
 export function Nav({ onCartOpen, cartCount }: { onCartOpen: () => void; cartCount: number }) {
   const [scrolled, setScrolled] = useState(false);
@@ -17,11 +18,8 @@ export function Nav({ onCartOpen, cartCount }: { onCartOpen: () => void; cartCou
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 font-display text-2xl font-bold tracking-tight">
-          <span className="grid place-items-center w-9 h-9 rounded-full bg-primary text-primary-foreground">
-            <Leaf className="w-4 h-4" />
-          </span>
-          <span>DXN<span className="text-gold">.</span></span>
+        <a href="#" aria-label="Maison DXN" className="flex items-center gap-2">
+          <img src={logoAsset.url} alt="Maison DXN" className="h-12 w-auto md:h-14 object-contain" />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm font-medium">
           {links.map((l) => (
