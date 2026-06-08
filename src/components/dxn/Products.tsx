@@ -49,37 +49,37 @@ export type Product = {
 };
 
 export const PRODUCTS: Product[] = [
-  { id: "rg", name: "DXN Reishi Gano (RG)", tag: "Ganoderma Capsules", price: 320, rating: 4.9, image: reishi.url },
-  { id: "gl", name: "DXN Ganocelium (GL)", tag: "Mycelium Capsules", price: 340, rating: 4.9, image: ganocelium.url },
-  { id: "sp", name: "DXN Spirulina", tag: "Green Algae Tablets", price: 280, rating: 4.8, image: spirulina.url },
-  { id: "sp120", name: "DXN Spirulina 120s", tag: "Travel Pack", price: 180, rating: 4.7, image: spirulinaSmall.url },
-  { id: "bc", name: "DXN Black Cumin Plus", tag: "Wellness Capsules", price: 260, rating: 4.7, image: blackCumin.url },
-  { id: "ps", name: "DXN Poria S Powder", tag: "Traditional Wellness", price: 380, rating: 4.7, image: poria.url },
-  { id: "lm", name: "DXN Lion's Mane", tag: "Focus & Clarity", price: 480, rating: 4.8, image: lionsMane.url },
-  { id: "tt", name: "DXN Tea Tree Cream", tag: "Skincare · 30g", price: 150, rating: 4.6, image: teaTree.url },
-  { id: "zk", name: "DXN Zhimeko Cream", tag: "Topical Care · 30g", price: 140, rating: 4.6, image: zhimeko.url },
-  { id: "as", name: "DXN Aloe V Facial Scrub", tag: "Skincare · 75g", price: 130, rating: 4.6, image: aloeScrub.url },
-  { id: "al", name: "DXN Aloe V Hand & Body Lotion", tag: "Body Care · 250ml", price: 160, rating: 4.7, image: aloeLotion.url },
-  { id: "gs", name: "DXN Ganozhi Shampoo", tag: "Hair Care · 250ml", price: 170, rating: 4.7, image: ganozhiShampoo.url },
-  { id: "lz", name: "DXN Lingzhi Coffee 3-in-1", tag: "Premix Coffee", price: 180, rating: 4.9, image: lingzhiCoffee.url },
-  { id: "mz", name: "DXN Morinzhi 700ml", tag: "Morinda Juice", price: 420, rating: 4.7, image: morinzhi.url },
-  { id: "mz285", name: "DXN Morinzhi 285ml", tag: "Morinda Juice · Travel", price: 210, rating: 4.7, image: morinzhiSmall.url },
-  { id: "rs", name: "DXN Roselle Juice", tag: "Botanical Beverage · 285ml", price: 200, rating: 4.7, image: roselle.url },
-  { id: "av", name: "DXN Aloe Vita", tag: "Aloe Vera Drink · 285ml", price: 190, rating: 4.7, image: aloeVita.url },
-  { id: "zm", name: "DXN Zhi Mint Plus", tag: "Sugar-Free Candy", price: 220, rating: 4.6, image: zhiMint.url },
-  { id: "ln", name: "DXN Lemonzhi", tag: "Lemon Tea Mix", price: 200, rating: 4.7, image: lemonzhi.url },
-  { id: "ot", name: "DXN Ootea Lingzhi Coffee 3-in-1", tag: "Oolong + Ganoderma", price: 195, rating: 4.8, image: ooteaCoffee.url },
-  { id: "oc", name: "DXN Oöcha", tag: "Premix Tea · 12 sachets", price: 175, rating: 4.7, image: oocha.url },
-  { id: "ae", name: "DXN Apple Enzyme Drink", tag: "15 × 50ml Sachets", price: 390, rating: 4.7, image: appleEnzyme.url },
-  { id: "hs", name: "DXN Himalayan Salt", tag: "Pink Salt · 650g", price: 110, rating: 4.6, image: himalayanSalt.url },
-  { id: "ms", name: "DXN Multipurpose Seasoning", tag: "Spice Blend · 120g", price: 95, rating: 4.6, image: seasoning.url },
-  { id: "ks", name: "Kallow Instant Tightening Serum", tag: "Kallow Cosmetics · 30ml", price: 520, rating: 4.9, image: kallowSerum.url },
-  { id: "kf", name: "Kallow Hydrating Face Cream", tag: "Argan & Grapeseed · 50ml", price: 480, rating: 4.9, image: kallowFaceCream.url },
-  { id: "ke", name: "Kallow Divine Touch Eye Cream", tag: "Lifting Impact", price: 560, rating: 4.9, image: kallowEyeCream.url },
-  { id: "kn", name: "Kallow Divine Touch Night Oil", tag: "Nourishing · 30ml", price: 540, rating: 4.9, image: kallowNightOil.url },
-  { id: "kt", name: "Kallow Micellar Tonic Water", tag: "Sage & Witch Hazel · 200ml", price: 360, rating: 4.8, image: kallowTonic.url },
-  { id: "gn", name: "DXN Ganoderma Classic", tag: "Heritage Blend", price: 360, rating: 4.8, image: ganoderma },
-  { id: "co", name: "DXN Cordyceps", tag: "Energy & Endurance", price: 550, rating: 4.7, image: cordyceps },
+  { id: "rg", name: "DXN Reishi Gano (RG)", tag: "كبسولات غانوديرما", price: 320, rating: 4.9, image: reishi.url },
+  { id: "gl", name: "DXN Ganocelium (GL)", tag: "كبسولات المايسيليوم", price: 340, rating: 4.9, image: ganocelium.url },
+  { id: "sp", name: "DXN Spirulina", tag: "أقراص الطحالب الخضراء", price: 280, rating: 4.8, image: spirulina.url },
+  { id: "sp120", name: "DXN Spirulina 120s", tag: "عبوة السفر", price: 180, rating: 4.7, image: spirulinaSmall.url },
+  { id: "bc", name: "DXN Black Cumin Plus", tag: "كبسولات الحبة السوداء", price: 260, rating: 4.7, image: blackCumin.url },
+  { id: "ps", name: "DXN Poria S Powder", tag: "عافية تقليدية", price: 380, rating: 4.7, image: poria.url },
+  { id: "lm", name: "DXN Lion's Mane", tag: "تركيز وصفاء ذهني", price: 480, rating: 4.8, image: lionsMane.url },
+  { id: "tt", name: "DXN Tea Tree Cream", tag: "العناية بالبشرة · 30غ", price: 150, rating: 4.6, image: teaTree.url },
+  { id: "zk", name: "DXN Zhimeko Cream", tag: "كريم موضعي · 30غ", price: 140, rating: 4.6, image: zhimeko.url },
+  { id: "as", name: "DXN Aloe V Facial Scrub", tag: "العناية بالبشرة · 75غ", price: 130, rating: 4.6, image: aloeScrub.url },
+  { id: "al", name: "DXN Aloe V Hand & Body Lotion", tag: "العناية بالجسم · 250مل", price: 160, rating: 4.7, image: aloeLotion.url },
+  { id: "gs", name: "DXN Ganozhi Shampoo", tag: "العناية بالشعر · 250مل", price: 170, rating: 4.7, image: ganozhiShampoo.url },
+  { id: "lz", name: "DXN Lingzhi Coffee 3-in-1", tag: "قهوة سريعة التحضير", price: 180, rating: 4.9, image: lingzhiCoffee.url },
+  { id: "mz", name: "DXN Morinzhi 700ml", tag: "عصير مورينزي", price: 420, rating: 4.7, image: morinzhi.url },
+  { id: "mz285", name: "DXN Morinzhi 285ml", tag: "عصير مورينزي · للسفر", price: 210, rating: 4.7, image: morinzhiSmall.url },
+  { id: "rs", name: "DXN Roselle Juice", tag: "مشروب نباتي · 285مل", price: 200, rating: 4.7, image: roselle.url },
+  { id: "av", name: "DXN Aloe Vita", tag: "مشروب الألوفيرا · 285مل", price: 190, rating: 4.7, image: aloeVita.url },
+  { id: "zm", name: "DXN Zhi Mint Plus", tag: "حلوى نعناع خالية من السكر", price: 220, rating: 4.6, image: zhiMint.url },
+  { id: "ln", name: "DXN Lemonzhi", tag: "مزيج شاي الليمون", price: 200, rating: 4.7, image: lemonzhi.url },
+  { id: "ot", name: "DXN Ootea Lingzhi Coffee 3-in-1", tag: "قهوة بالأولونغ والغانوديرما", price: 195, rating: 4.8, image: ooteaCoffee.url },
+  { id: "oc", name: "DXN Oöcha", tag: "شاي سريع التحضير · 12 ظرفاً", price: 175, rating: 4.7, image: oocha.url },
+  { id: "ae", name: "DXN Apple Enzyme Drink", tag: "15 × 50مل ظرف", price: 390, rating: 4.7, image: appleEnzyme.url },
+  { id: "hs", name: "DXN Himalayan Salt", tag: "ملح وردي · 650غ", price: 110, rating: 4.6, image: himalayanSalt.url },
+  { id: "ms", name: "DXN Multipurpose Seasoning", tag: "خلطة توابل · 120غ", price: 95, rating: 4.6, image: seasoning.url },
+  { id: "ks", name: "Kallow Instant Tightening Serum", tag: "كالّو · سيروم 30مل", price: 520, rating: 4.9, image: kallowSerum.url },
+  { id: "kf", name: "Kallow Hydrating Face Cream", tag: "أرغان وعنب · 50مل", price: 480, rating: 4.9, image: kallowFaceCream.url },
+  { id: "ke", name: "Kallow Divine Touch Eye Cream", tag: "كريم شد للعينين", price: 560, rating: 4.9, image: kallowEyeCream.url },
+  { id: "kn", name: "Kallow Divine Touch Night Oil", tag: "زيت ليلي مغذٍّ · 30مل", price: 540, rating: 4.9, image: kallowNightOil.url },
+  { id: "kt", name: "Kallow Micellar Tonic Water", tag: "تونر ميسيلار · 200مل", price: 360, rating: 4.8, image: kallowTonic.url },
+  { id: "gn", name: "DXN Ganoderma Classic", tag: "خلطة تراثية", price: 360, rating: 4.8, image: ganoderma },
+  { id: "co", name: "DXN Cordyceps", tag: "طاقة وقدرة على التحمل", price: 550, rating: 4.7, image: cordyceps },
 ];
 
 // Legacy unused fallbacks (kept to preserve imports if user reverts)
@@ -129,13 +129,13 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
     <section ref={rootRef} id="products" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="prod-head max-w-2xl mb-16">
-          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">Featured Collection</div>
+          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">المجموعة المميزة</div>
           <h2 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Crafted for <span className="text-gradient-primary italic">vitality</span>.
+            صُنعت من أجل <span className="text-gradient-primary italic">الحيوية</span>.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
-            A curated selection of DXN's most loved wellness essentials — each one a quiet ritual
-            for daily balance.
+            تشكيلة منتقاة من أكثر منتجات DXN حباً — كل واحد منها طقس هادئ
+            لتوازنك اليومي.
           </p>
         </div>
 
@@ -160,7 +160,7 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
                 <button
                   onClick={() => onAdd(p)}
                   className="absolute bottom-3 right-3 w-11 h-11 rounded-full bg-primary text-primary-foreground grid place-items-center shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all hover:scale-110"
-                  aria-label={`Add ${p.name} to cart`}
+                  aria-label={`إضافة ${p.name} إلى السلة`}
                 >
                   <Plus className="w-4 h-4" />
                 </button>
@@ -172,7 +172,7 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
                   <div className="flex items-center gap-1.5 mt-2 text-sm text-muted-foreground">
                     <Star className="w-3.5 h-3.5 fill-gold text-gold" />
                     <span className="font-medium text-foreground">{p.rating}</span>
-                    <span>· In stock</span>
+                    <span>· متوفر</span>
                   </div>
                 </div>
                 <div className="text-right">

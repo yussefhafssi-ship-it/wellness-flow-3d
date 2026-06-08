@@ -17,10 +17,10 @@ import { useLenis } from "@/lib/use-lenis";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DXN — Nature's Finest Wellness Products" },
-      { name: "description", content: "Premium Ganoderma, Spirulina, Coffee & supplements. Trusted by 10M+ customers in 180+ countries." },
-      { property: "og:title", content: "DXN — Nature's Finest Wellness Products" },
-      { property: "og:description", content: "Premium Ganoderma, Spirulina, Coffee & supplements. Trusted by 10M+ customers in 180+ countries." },
+      { title: "DXN — منتجات صحية فاخرة من الطبيعة" },
+      { name: "description", content: "غانوديرما، سبيرولينا، قهوة لينجزي ومكملات DXN الفاخرة. موثوقة من أكثر من 10 ملايين عميل في 180+ دولة." },
+      { property: "og:title", content: "DXN — منتجات صحية فاخرة من الطبيعة" },
+      { property: "og:description", content: "غانوديرما، سبيرولينا، قهوة لينجزي ومكملات DXN الفاخرة. موثوقة من أكثر من 10 ملايين عميل في 180+ دولة." },
     ],
   }),
   component: Index,

@@ -10,7 +10,13 @@ export function Nav({ onCartOpen, cartCount }: { onCartOpen: () => void; cartCou
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const links = ["Shop", "Products", "Story", "Benefits", "Contact"];
+  const links = [
+    { label: "المتجر", href: "#shop" },
+    { label: "المنتجات", href: "#products" },
+    { label: "قصتنا", href: "#story" },
+    { label: "المميزات", href: "#benefits" },
+    { label: "تواصل معنا", href: "#contact" },
+  ];
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
@@ -23,8 +29,8 @@ export function Nav({ onCartOpen, cartCount }: { onCartOpen: () => void; cartCou
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm font-medium">
           {links.map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`} className="story-link text-foreground/80 hover:text-primary transition-colors">
-              {l}
+            <a key={l.href} href={l.href} className="story-link text-foreground/80 hover:text-primary transition-colors">
+              {l.label}
             </a>
           ))}
         </nav>

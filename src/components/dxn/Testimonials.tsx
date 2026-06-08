@@ -1,12 +1,12 @@
 import { Star } from "lucide-react";
 
 const reviews = [
-  { n: "Amelia R.", c: "Lisbon", t: "I've never felt this clear in the mornings. The Lingzhi Coffee is a small daily luxury.", r: 5 },
-  { n: "Kenji T.", c: "Tokyo", t: "DXN Reishi has been part of my routine for 2 years. Real quality you can feel.", r: 5 },
-  { n: "Priya S.", c: "Mumbai", t: "The Spirulina is unmatched — vibrant, clean, and the packaging is gorgeous.", r: 5 },
-  { n: "Marco D.", c: "Milan", t: "From farm to bottle, the standards are obvious. Trusted brand.", r: 5 },
-  { n: "Sara L.", c: "Berlin", t: "Cordyceps changed my training recovery. I recommend it to my whole studio.", r: 5 },
-  { n: "Oluwa N.", c: "Lagos", t: "Real wellness, not hype. DXN has earned a permanent spot on my shelf.", r: 5 },
+  { n: "أمينة ر.", c: "الدار البيضاء", t: "أصبحت قهوة لينجزي طقساً يومياً صغيراً لا أتخلى عنه. صفاء في الصباح كما لم أعرف من قبل.", r: 5 },
+  { n: "كريم ت.", c: "الرباط", t: "ريشي غانو من DXN جزء من روتيني منذ سنتين. جودة حقيقية تُحَس.", r: 5 },
+  { n: "سلمى ش.", c: "مراكش", t: "السبيرولينا لا مثيل لها — حيوية، نقية، والتغليف رائع.", r: 5 },
+  { n: "ياسين د.", c: "فاس", t: "من المزرعة إلى القارورة، المعايير واضحة. علامة موثوقة.", r: 5 },
+  { n: "سارة ل.", c: "طنجة", t: "الكورديسبس غيّر تعافي تمريني. أوصي به في الاستوديو بأكمله.", r: 5 },
+  { n: "هند ن.", c: "أكادير", t: "عافية حقيقية لا ادّعاء. حجزت DXN مكاناً دائماً على رفّي.", r: 5 },
 ];
 
 export function Testimonials() {
@@ -14,9 +14,9 @@ export function Testimonials() {
   return (
     <section className="py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 mb-14">
-        <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">Loved Worldwide</div>
+        <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">محبوبة عالمياً</div>
         <h2 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl">
-          Real rituals, <span className="text-gradient-primary italic">real people</span>.
+          طقوس حقيقية، <span className="text-gradient-primary italic">أشخاص حقيقيون</span>.
         </h2>
       </div>
       <div className="relative">

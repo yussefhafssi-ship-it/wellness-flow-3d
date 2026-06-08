@@ -1,7 +1,7 @@
 export function Marquee() {
   const items = [
-    "100% Natural", "Halal Certified", "GMP Standard", "ISO 9001",
-    "Worldwide Trusted", "Since 1993", "Scientifically Researched", "Premium Quality",
+    "طبيعي 100%", "معتمد حلال", "معايير GMP", "ISO 9001",
+    "موثوق عالمياً", "منذ 1993", "مبني على أبحاث علمية", "جودة فاخرة",
   ];
   return (
     <section className="py-10 border-y border-border/60 bg-primary text-primary-foreground overflow-hidden">

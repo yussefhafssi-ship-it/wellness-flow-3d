@@ -38,13 +38,12 @@ export function Showcase() {
       <div className="relative h-screen flex items-center">
         <div ref={trackRef} className="flex gap-10 pl-[10vw] will-change-transform">
           <div className="flex-shrink-0 w-[60vw] max-w-xl flex flex-col justify-center">
-            <div className="text-sm uppercase tracking-[0.3em] text-gold">3D Showcase</div>
-            <h2 className="mt-4 text-5xl md:text-7xl font-bold leading-[1.05]">
-              Every <span className="text-gradient-gold italic">detail</span><br /> matters.
+            <div className="text-sm uppercase tracking-[0.3em] text-gold">عرض ثلاثي الأبعاد</div>
+            <h2 className="mt-4 text-5xl md:text-7xl font-bold leading-[1.15]">
+              كل <span className="text-gradient-gold italic">تفصيل</span><br /> يهمّ.
             </h2>
             <p className="mt-6 text-primary-foreground/70 text-lg max-w-md">
-              Slow down and discover the textures, the rituals, the science behind every bottle.
-              Scroll to explore.
+              تمهّل واكتشف الملمس، والطقوس، والعلم خلف كل قارورة. مرّر لتستكشف.
             </p>
           </div>
           {PRODUCTS.map((p, i) => (
@@ -57,7 +56,7 @@ export function Showcase() {
               <div className="absolute bottom-0 left-0 right-0 p-7">
                 <div className="text-xs uppercase tracking-[0.3em] text-gold">0{i + 1} · {p.tag}</div>
                 <div className="mt-2 text-3xl font-display font-bold">{p.name}</div>
-                <div className="mt-1 text-primary-foreground/70 text-sm">{formatMAD(p.price)} · Bestseller</div>
+                <div className="mt-1 text-primary-foreground/70 text-sm">{formatMAD(p.price)} · الأكثر مبيعاً</div>
               </div>
             </div>
           ))}
