@@ -26,6 +26,16 @@ import zhimeko from "@/assets/products/dxn-35.png.asset.json";
 import aloeScrub from "@/assets/products/dxn-36.png.asset.json";
 import aloeLotion from "@/assets/products/dxn-37.png.asset.json";
 import morinzhiSmall from "@/assets/products/dxn-53.png.asset.json";
+import kallowSerum from "@/assets/products/dxn-134.png.asset.json";
+import kallowFaceCream from "@/assets/products/dxn-135.png.asset.json";
+import kallowEyeCream from "@/assets/products/dxn-140.png.asset.json";
+import kallowNightOil from "@/assets/products/dxn-143.png.asset.json";
+import kallowTonic from "@/assets/products/dxn-133.png.asset.json";
+import appleEnzyme from "@/assets/products/dxn-68.png.asset.json";
+import himalayanSalt from "@/assets/products/dxn-91.png.asset.json";
+import seasoning from "@/assets/products/dxn-92.png.asset.json";
+import oocha from "@/assets/products/dxn-93.png.asset.json";
+import ooteaCoffee from "@/assets/products/dxn-122.png.asset.json";
 
 import { formatMAD, usePriceOverrides } from "@/lib/prices";
 
@@ -58,6 +68,16 @@ export const PRODUCTS: Product[] = [
   { id: "av", name: "DXN Aloe Vita", tag: "Aloe Vera Drink · 285ml", price: 190, rating: 4.7, image: aloeVita.url },
   { id: "zm", name: "DXN Zhi Mint Plus", tag: "Sugar-Free Candy", price: 220, rating: 4.6, image: zhiMint.url },
   { id: "ln", name: "DXN Lemonzhi", tag: "Lemon Tea Mix", price: 200, rating: 4.7, image: lemonzhi.url },
+  { id: "ot", name: "DXN Ootea Lingzhi Coffee 3-in-1", tag: "Oolong + Ganoderma", price: 195, rating: 4.8, image: ooteaCoffee.url },
+  { id: "oc", name: "DXN Oöcha", tag: "Premix Tea · 12 sachets", price: 175, rating: 4.7, image: oocha.url },
+  { id: "ae", name: "DXN Apple Enzyme Drink", tag: "15 × 50ml Sachets", price: 390, rating: 4.7, image: appleEnzyme.url },
+  { id: "hs", name: "DXN Himalayan Salt", tag: "Pink Salt · 650g", price: 110, rating: 4.6, image: himalayanSalt.url },
+  { id: "ms", name: "DXN Multipurpose Seasoning", tag: "Spice Blend · 120g", price: 95, rating: 4.6, image: seasoning.url },
+  { id: "ks", name: "Kallow Instant Tightening Serum", tag: "Kallow Cosmetics · 30ml", price: 520, rating: 4.9, image: kallowSerum.url },
+  { id: "kf", name: "Kallow Hydrating Face Cream", tag: "Argan & Grapeseed · 50ml", price: 480, rating: 4.9, image: kallowFaceCream.url },
+  { id: "ke", name: "Kallow Divine Touch Eye Cream", tag: "Lifting Impact", price: 560, rating: 4.9, image: kallowEyeCream.url },
+  { id: "kn", name: "Kallow Divine Touch Night Oil", tag: "Nourishing · 30ml", price: 540, rating: 4.9, image: kallowNightOil.url },
+  { id: "kt", name: "Kallow Micellar Tonic Water", tag: "Sage & Witch Hazel · 200ml", price: 360, rating: 4.8, image: kallowTonic.url },
   { id: "gn", name: "DXN Ganoderma Classic", tag: "Heritage Blend", price: 360, rating: 4.8, image: ganoderma },
   { id: "co", name: "DXN Cordyceps", tag: "Energy & Endurance", price: 550, rating: 4.7, image: cordyceps },
 ];
