@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { ArrowLeft, Save, RotateCcw } from "lucide-react";
 
 export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin · DXN Price Manager" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "لوحة الإدارة · إدارة أسعار DXN" }, { name: "robots", content: "noindex" }] }),
   component: Admin,
 });
 
@@ -41,7 +41,7 @@ function Admin() {
   };
 
   const onResetAll = () => {
-    if (!confirm("Reset all prices to defaults?")) return;
+    if (!confirm("هل تريد إعادة تعيين جميع الأسعار للقيم الافتراضية؟")) return;
     localStorage.removeItem("dxn:price-overrides:v1");
     const init: Record<string, string> = {};
     PRODUCTS.forEach((p) => (init[p.id] = String(p.price)));
@@ -55,19 +55,19 @@ function Admin() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-3">
-              <ArrowLeft className="w-4 h-4" /> Back to store
+              <ArrowLeft className="w-4 h-4 rtl:rotate-180" /> العودة للمتجر
             </Link>
-            <h1 className="text-4xl font-display font-bold">Price Manager</h1>
+            <h1 className="text-4xl font-display font-bold">إدارة الأسعار</h1>
             <p className="text-muted-foreground mt-2">
-              Edit product prices in MAD. Changes apply instantly across the store on this device.
+              عدّل أسعار المنتجات بالدرهم المغربي. التغييرات تُطبَّق فوراً عبر المتجر على هذا الجهاز.
             </p>
           </div>
           <div className="flex gap-2">
             <Button variant="outline" onClick={onResetAll}>
-              <RotateCcw className="w-4 h-4" /> Reset all
+              <RotateCcw className="w-4 h-4" /> إعادة تعيين الكل
             </Button>
             <Button onClick={onSave}>
-              <Save className="w-4 h-4" /> {saved ? "Saved" : "Save changes"}
+              <Save className="w-4 h-4" /> {saved ? "تم الحفظ" : "حفظ التغييرات"}
             </Button>
           </div>
         </div>
@@ -78,7 +78,7 @@ function Admin() {
               <img src={p.image} alt={p.name} className="w-16 h-16 rounded-lg object-contain bg-secondary p-1" />
               <div className="flex-1 min-w-0">
                 <div className="font-semibold truncate">{p.name}</div>
-                <div className="text-xs text-muted-foreground">{p.tag} · Default {formatMAD(p.price)}</div>
+                <div className="text-xs text-muted-foreground">{p.tag} · افتراضي {formatMAD(p.price)}</div>
               </div>
               <div className="flex items-center gap-2">
                 <Input
@@ -88,8 +88,8 @@ function Admin() {
                   value={prices[p.id] ?? ""}
                   onChange={(e) => setPrices((s) => ({ ...s, [p.id]: e.target.value }))}
                 />
-                <span className="text-sm text-muted-foreground">MAD</span>
-                <Button variant="ghost" size="icon" onClick={() => onReset(p.id)} title="Reset to default">
+                <span className="text-sm text-muted-foreground">درهم</span>
+                <Button variant="ghost" size="icon" onClick={() => onReset(p.id)} title="إعادة للقيمة الافتراضية">
                   <RotateCcw className="w-4 h-4" />
                 </Button>
               </div>
@@ -98,7 +98,7 @@ function Admin() {
         </div>
 
         <p className="text-xs text-muted-foreground mt-6">
-          Note: prices are stored in your browser (localStorage). For multi-device sync, enable Lovable Cloud.
+          ملاحظة: تُخزَّن الأسعار محلياً في متصفحك. للمزامنة عبر الأجهزة، فعّل Lovable Cloud.
         </p>
       </div>
     </div>
