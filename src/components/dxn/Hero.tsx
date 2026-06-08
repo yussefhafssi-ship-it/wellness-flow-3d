@@ -83,37 +83,37 @@ export function Hero() {
         <div>
           <div className="hero-eyebrow inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium tracking-widest uppercase text-primary">
             <Sparkles className="w-3.5 h-3.5 text-gold" />
-            Premium Wellness · Since 1993
+            عافية فاخرة · منذ 1993
           </div>
 
-          <h1 ref={titleRef} className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02]">
-            <span className="block overflow-hidden"><span className="hero-word inline-block">Nature's</span></span>
-            <span className="block overflow-hidden"><span className="hero-word inline-block">Finest</span></span>
+          <h1 ref={titleRef} className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15]">
+            <span className="block overflow-hidden"><span className="hero-word inline-block">أرقى</span></span>
+            <span className="block overflow-hidden"><span className="hero-word inline-block">منتجات</span></span>
             <span className="block overflow-hidden">
-              <span className="hero-word inline-block text-gradient-primary">Wellness</span>{" "}
-              <span className="hero-word inline-block text-gradient-gold italic">Products</span>
+              <span className="hero-word inline-block text-gradient-primary">العافية</span>{" "}
+              <span className="hero-word inline-block text-gradient-gold italic">الطبيعية</span>
             </span>
           </h1>
 
           <p className="hero-sub mt-7 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Premium Ganoderma, Spirulina, Coffee, Supplements & Healthy Living Solutions —
-            crafted from the earth's finest botanicals.
+            غانوديرما فاخرة، سبيرولينا، قهوة، مكملات وحلول حياة صحية —
+            مصنوعة من أرقى نباتات الأرض.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild size="lg" className="hero-cta h-14 px-8 rounded-full bg-primary hover:bg-primary/90 shadow-elegant text-base">
-              <a href="#shop">Shop Now <ArrowRight className="w-4 h-4 ml-1" /></a>
+              <a href="#shop">تسوّق الآن <ArrowRight className="w-4 h-4 mr-1 rtl:rotate-180" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="hero-cta h-14 px-8 rounded-full border-primary/30 hover:bg-primary/5 text-base">
-              <a href="#products">Explore Products</a>
+              <a href="#products">استكشف المنتجات</a>
             </Button>
           </div>
 
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
             {[
-              { v: "10M+", l: "Customers" },
-              { v: "180+", l: "Countries" },
-              { v: "30+", l: "Years" },
+              { v: "+10M", l: "عميل" },
+              { v: "+180", l: "دولة" },
+              { v: "+30", l: "سنة" },
             ].map((s) => (
               <div key={s.l} className="hero-stat">
                 <div className="text-3xl font-display font-bold text-primary">{s.v}</div>
@@ -144,13 +144,13 @@ export function Hero() {
                 <Sparkles className="w-5 h-5 text-gold" />
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Bestseller</div>
-                <div className="font-semibold text-sm">Reishi Ganoderma</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">الأكثر مبيعاً</div>
+                <div className="font-semibold text-sm">ريشي غانوديرما</div>
               </div>
             </div>
             <div className="absolute -top-4 -right-4 glass rounded-2xl px-4 py-3 shadow-lg">
-              <div className="text-xs text-muted-foreground">Trusted in</div>
-              <div className="font-bold text-primary">180 countries</div>
+              <div className="text-xs text-muted-foreground">موثوق في</div>
+              <div className="font-bold text-primary">180 دولة</div>
             </div>
           </div>
         </div>
