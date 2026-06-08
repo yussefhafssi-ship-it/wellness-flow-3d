@@ -17,6 +17,15 @@ import lingzhiCoffee from "@/assets/products/dxn-49.png.asset.json";
 import morinzhi from "@/assets/products/dxn-54.png.asset.json";
 import zhiMint from "@/assets/products/dxn-58.png.asset.json";
 import lemonzhi from "@/assets/products/dxn-59.png.asset.json";
+import roselle from "@/assets/products/dxn-55.png.asset.json";
+import aloeVita from "@/assets/products/dxn-62.png.asset.json";
+import spirulinaSmall from "@/assets/products/dxn-3.png.asset.json";
+import poria from "@/assets/products/dxn-15.png.asset.json";
+import ganozhiShampoo from "@/assets/products/dxn-30.png.asset.json";
+import zhimeko from "@/assets/products/dxn-35.png.asset.json";
+import aloeScrub from "@/assets/products/dxn-36.png.asset.json";
+import aloeLotion from "@/assets/products/dxn-37.png.asset.json";
+import morinzhiSmall from "@/assets/products/dxn-53.png.asset.json";
 
 import { formatMAD, usePriceOverrides } from "@/lib/prices";
 
@@ -33,11 +42,20 @@ export const PRODUCTS: Product[] = [
   { id: "rg", name: "DXN Reishi Gano (RG)", tag: "Ganoderma Capsules", price: 320, rating: 4.9, image: reishi.url },
   { id: "gl", name: "DXN Ganocelium (GL)", tag: "Mycelium Capsules", price: 340, rating: 4.9, image: ganocelium.url },
   { id: "sp", name: "DXN Spirulina", tag: "Green Algae Tablets", price: 280, rating: 4.8, image: spirulina.url },
+  { id: "sp120", name: "DXN Spirulina 120s", tag: "Travel Pack", price: 180, rating: 4.7, image: spirulinaSmall.url },
   { id: "bc", name: "DXN Black Cumin Plus", tag: "Wellness Capsules", price: 260, rating: 4.7, image: blackCumin.url },
+  { id: "ps", name: "DXN Poria S Powder", tag: "Traditional Wellness", price: 380, rating: 4.7, image: poria.url },
   { id: "lm", name: "DXN Lion's Mane", tag: "Focus & Clarity", price: 480, rating: 4.8, image: lionsMane.url },
   { id: "tt", name: "DXN Tea Tree Cream", tag: "Skincare · 30g", price: 150, rating: 4.6, image: teaTree.url },
+  { id: "zk", name: "DXN Zhimeko Cream", tag: "Topical Care · 30g", price: 140, rating: 4.6, image: zhimeko.url },
+  { id: "as", name: "DXN Aloe V Facial Scrub", tag: "Skincare · 75g", price: 130, rating: 4.6, image: aloeScrub.url },
+  { id: "al", name: "DXN Aloe V Hand & Body Lotion", tag: "Body Care · 250ml", price: 160, rating: 4.7, image: aloeLotion.url },
+  { id: "gs", name: "DXN Ganozhi Shampoo", tag: "Hair Care · 250ml", price: 170, rating: 4.7, image: ganozhiShampoo.url },
   { id: "lz", name: "DXN Lingzhi Coffee 3-in-1", tag: "Premix Coffee", price: 180, rating: 4.9, image: lingzhiCoffee.url },
-  { id: "mz", name: "DXN Morinzhi", tag: "Morinda Juice · 700ml", price: 420, rating: 4.7, image: morinzhi.url },
+  { id: "mz", name: "DXN Morinzhi 700ml", tag: "Morinda Juice", price: 420, rating: 4.7, image: morinzhi.url },
+  { id: "mz285", name: "DXN Morinzhi 285ml", tag: "Morinda Juice · Travel", price: 210, rating: 4.7, image: morinzhiSmall.url },
+  { id: "rs", name: "DXN Roselle Juice", tag: "Botanical Beverage · 285ml", price: 200, rating: 4.7, image: roselle.url },
+  { id: "av", name: "DXN Aloe Vita", tag: "Aloe Vera Drink · 285ml", price: 190, rating: 4.7, image: aloeVita.url },
   { id: "zm", name: "DXN Zhi Mint Plus", tag: "Sugar-Free Candy", price: 220, rating: 4.6, image: zhiMint.url },
   { id: "ln", name: "DXN Lemonzhi", tag: "Lemon Tea Mix", price: 200, rating: 4.7, image: lemonzhi.url },
   { id: "gn", name: "DXN Ganoderma Classic", tag: "Heritage Blend", price: 360, rating: 4.8, image: ganoderma },
