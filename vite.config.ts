@@ -12,4 +12,19 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    optimizeDeps: {
+      include: [
+        "gsap",
+        "gsap/ScrollTrigger",
+        "lenis",
+        "@react-three/fiber",
+        "@react-three/drei",
+        "three",
+      ],
+    },
+    ssr: {
+      noExternal: ["gsap", "lenis", "@react-three/fiber", "@react-three/drei"],
+    },
+  },
 });
