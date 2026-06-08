@@ -129,13 +129,13 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
     <section ref={rootRef} id="products" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="prod-head max-w-2xl mb-16">
-          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">Featured Collection</div>
+          <div className="text-sm uppercase tracking-[0.25em] text-gold font-medium">المجموعة المميزة</div>
           <h2 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Crafted for <span className="text-gradient-primary italic">vitality</span>.
+            صُنعت من أجل <span className="text-gradient-primary italic">الحيوية</span>.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
-            A curated selection of DXN's most loved wellness essentials — each one a quiet ritual
-            for daily balance.
+            تشكيلة منتقاة من أكثر منتجات DXN حباً — كل واحد منها طقس هادئ
+            لتوازنك اليومي.
           </p>
         </div>
 
@@ -160,7 +160,7 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
                 <button
                   onClick={() => onAdd(p)}
                   className="absolute bottom-3 right-3 w-11 h-11 rounded-full bg-primary text-primary-foreground grid place-items-center shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all hover:scale-110"
-                  aria-label={`Add ${p.name} to cart`}
+                  aria-label={`إضافة ${p.name} إلى السلة`}
                 >
                   <Plus className="w-4 h-4" />
                 </button>
@@ -172,7 +172,7 @@ export function Products({ onAdd }: { onAdd: (p: Product) => void }) {
                   <div className="flex items-center gap-1.5 mt-2 text-sm text-muted-foreground">
                     <Star className="w-3.5 h-3.5 fill-gold text-gold" />
                     <span className="font-medium text-foreground">{p.rating}</span>
-                    <span>· In stock</span>
+                    <span>· متوفر</span>
                   </div>
                 </div>
                 <div className="text-right">
