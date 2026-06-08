@@ -76,10 +76,10 @@ export function CartDrawer({
           ))}
         </div>
         <div className="p-6 border-t space-y-4 bg-secondary/30">
-          <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="font-semibold">{formatMAD(subtotal)}</span></div>
-          <div className="flex justify-between text-sm"><span className="text-muted-foreground">Shipping</span><span>Free</span></div>
-          <div className="flex justify-between text-xl font-display font-bold pt-2 border-t"><span>Total</span><span>{formatMAD(subtotal)}</span></div>
-          <Button className="w-full h-14 rounded-full bg-primary hover:bg-primary/90 text-base">Checkout</Button>
+          <div className="flex justify-between text-sm"><span className="text-muted-foreground">المجموع الفرعي</span><span className="font-semibold">{formatMAD(subtotal)}</span></div>
+          <div className="flex justify-between text-sm"><span className="text-muted-foreground">الشحن</span><span>مجاني</span></div>
+          <div className="flex justify-between text-xl font-display font-bold pt-2 border-t"><span>الإجمالي</span><span>{formatMAD(subtotal)}</span></div>
+          <Button className="w-full h-14 rounded-full bg-primary hover:bg-primary/90 text-base">إتمام الشراء</Button>
         </div>
       </aside>
     </>
